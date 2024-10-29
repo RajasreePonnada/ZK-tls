@@ -9,6 +9,19 @@
 
 # How to use it 
 
+### The Steps:
+
+1. Clone the repository: git clone https://github.com/m-pandey5/Zk-Market
+2. Navigate into src: cd frontend/src
+3. npm start
+4. The User is prompted to connect their wallet in their browser.
+5. Then options are displayed to select whether they're an user or a protocol
+6. If it's a user, then they're displayed with provider qr, by scanning which they can generate zk proof
+7. If it's a protocol, then they're shown all users' prooofs which can be verified using zk-TLS library, and thus can check whether they fulfill particular criteria or not.
+8. Hence the user is sent incentive,which is updated on-chain and displayed to both user and protocol.
+
+### The Dapp is at it's core uses Zk-TLS
+
 
 
 
@@ -63,3 +76,5 @@ Enhances the relevance and effectiveness of airdrops.
 **Blogs**
 https://www.nascent.xyz/idea/cryptos-airtag-moment
 https://x.com/VitalikButerin/status/1828727585204842867?utm_source=tldrcrypto
+
+

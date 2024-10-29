@@ -14,6 +14,8 @@ function UserDashboard({ walletAddress, contract }) {
   const [isEligible, setIsEligible] = useState(false);
   const [qrCodeUrl, setQrCodeUrl] = useState('');
   const [providerName, setProviderName] = useState('');
+  const [proofGenerated, setProofGenerated] = useState(false);
+
 
 
   useEffect(() => {
@@ -92,6 +94,9 @@ function UserDashboard({ walletAddress, contract }) {
   async function handleGenerateQR() {
     const url = await generateVerificationRequest();
     setQrCodeUrl(url);
+    setTimeout(() => {
+      setProofGenerated(true);
+    }, 120000);
   }
   async function connectWallet() {
     if (!connected) {
@@ -130,6 +135,9 @@ function UserDashboard({ walletAddress, contract }) {
       {url && (
         <div className="qr-section">
           <QRCode value={url} className="qr-code" />
+          {proofGenerated && (
+            <p className="proof-submitted">Proof Submitted to Reclaim Contract Successfully</p>
+          )}
         </div>
       )}
     </div>

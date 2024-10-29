@@ -77,3 +77,9 @@
   .qr-code {
     margin-top: 20px;
   }
+
+  .proof-submitted {
+    color: green;
+    font-weight: bold;
+  }
+  

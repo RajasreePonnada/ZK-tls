@@ -12,7 +12,7 @@ export const generateProofs = async () => {
     callbackUrl: 'https://your-callback-url.com',
     providers: providers.map(provider => ({
       name: provider,
-      params: {} // Add any necessary parameters
+      params: {} 
     }))
   });
 
